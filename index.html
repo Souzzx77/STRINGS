@@ -1429,6 +1429,53 @@ z-index:9999;
 width:320px;
 }
 
+.floating-player-dropdown{
+
+position:absolute;
+
+top:70px;
+right:0;
+
+width:320px;
+
+padding:18px;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+180deg,
+#111827,
+#0b1020
+);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 25px 70px rgba(0,0,0,.5),
+0 0 40px rgba(139,92,246,.10);
+
+opacity:0;
+visibility:hidden;
+
+transform:translateY(-12px);
+
+transition:.35s ease;
+
+z-index:9999;
+
+}
+
+.floating-player-dropdown.active{
+
+opacity:1;
+visibility:visible;
+
+transform:translateY(0);
+
+}
+
 .player-toggle{
 width:100%;
 
@@ -2827,6 +2874,21 @@ translateY(0);
 
 }
 
+}
+
+/* ==========================================
+   CORREÇÃO: FUNDO DO CARD DO PLAYER
+========================================== */
+
+.floating-player .song-card{
+  background: linear-gradient(180deg, #111827, #0b1020) !important;
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(18px);
+}
+
+/* garante que o hover não volte transparência */
+.floating-player .song-card:hover{
+  background: linear-gradient(180deg, #111827, #0b1020) !important;
 }
 
 </style>
