@@ -1,40 +1,57 @@
 # 🎸 STRINGS.
 
-Transformando emoções em acordes.
+### Transformando adoração em acordes.
 
-STRINGS é uma plataforma dedicada ao universo do violão, composição musical e desenvolvimento da musicalidade. O projeto reúne conteúdos, composições autorais, estudos, técnicas e experiências construídas através das cordas.
+STRINGS é um projeto cristão dedicado à música, adoração e composição. Seu propósito é ajudar músicos, levitas e adoradores a desenvolverem suas habilidades enquanto usam a música como instrumento para glorificar a Deus.
 
 ---
 
-## ✨ Sobre
+# ✨ Propósito
 
-Mais do que um simples site, o STRINGS nasce da ideia de que a música é uma linguagem capaz de comunicar aquilo que muitas vezes as palavras não conseguem expressar.
+Acreditamos que a música vai além de notas e técnicas.
 
-O projeto reúne:
+Cada acorde pode carregar uma mensagem.
+Cada melodia pode anunciar o Evangelho.
+Cada canção pode conduzir corações à presença de Cristo.
 
-* Dedilhados e técnicas modernas
-* Campo harmônico
+O STRINGS nasceu para unir musicalidade e propósito, oferecendo conteúdos que auxiliem músicos cristãos em sua jornada ministerial.
+
+---
+
+# 🎼 O que você encontrará
+
+* Dedilhados e técnicas para violão
+* Campo harmônico aplicado à adoração
 * Escalas e improvisação
-* Composição musical
-* Percepção auditiva
-* Biblioteca de estudos
+* Estudos de musicalidade
+* Composição cristã
+* Desenvolvimento ministerial
 * Canções autorais
+* Recursos para levitas e ministros de louvor
 
 ---
 
-## 🎼 Composições
+# 🎵 Composições
 
-Algumas das obras presentes no projeto:
+Algumas das canções presentes no projeto:
 
 * Canção do Noivo
 * Por Meio de Nós
 * A Estaca Zero
 
-Cada composição representa uma etapa da jornada musical e espiritual desenvolvida ao longo dos anos.
+Cada composição nasce da Palavra, da oração e da busca por transmitir verdades bíblicas através da música.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+# 📖 Versículo Base
+
+> "Tudo quanto tem fôlego louve ao Senhor. Louvai ao Senhor."
+>
+> Salmos 150:6
+
+---
+
+# 🚀 Tecnologias Utilizadas
 
 * HTML5
 * CSS3
@@ -44,7 +61,7 @@ Cada composição representa uma etapa da jornada musical e espiritual desenvolv
 
 ---
 
-## 📱 Responsividade
+# 📱 Responsividade
 
 O projeto foi desenvolvido para funcionar em:
 
@@ -55,20 +72,21 @@ O projeto foi desenvolvido para funcionar em:
 
 ---
 
-## 🎨 Características
+# 🎨 Características
 
-* Interface moderna
+* Interface moderna e minimalista
 * Tema escuro premium
-* Animações suaves
-* Efeitos de iluminação dinâmica
-* Navegação intuitiva
 * Design responsivo
+* Biblioteca musical
+* Canções autorais
+* Player integrado
+* Animações suaves
 * Página 404 personalizada
-* Player musical integrado
+* Experiência focada em adoração e musicalidade
 
 ---
 
-## 📂 Estrutura
+# 📂 Estrutura
 
 ```text
 STRINGS/
@@ -80,30 +98,41 @@ STRINGS/
 ├── assets/
 │   ├── imagens
 │   ├── capas
-│   └── ícones
+│   ├── ícones
+│   └── composições
 │
 └── README.md
 ```
 
-## 🎵 Filosofia
+# 🎯 Missão
 
-> A música não é apenas som.
-> É memória, identidade, adoração e expressão.
+Capacitar músicos e adoradores para que desenvolvam seus dons com excelência, entendendo que a técnica é importante, mas o propósito é indispensável.
 
-Cada acorde carrega uma história.
-Cada composição guarda uma jornada.
+O objetivo não é apenas formar instrumentistas melhores, mas adoradores mais conscientes de seu chamado.
 
 ---
 
-## 👨‍💻 Autor
+# 👨‍💻 Autor
 
 **Vinícios Santana**
 
-Fundador do projeto STRINGS.
+Músico, compositor cristão e fundador do projeto STRINGS.
 
 ---
 
-## © Licença
+# ✝️ Declaração
+
+O STRINGS existe para exaltar a Cristo.
+
+Toda composição, estudo e conteúdo presente neste projeto busca apontar para Jesus, o verdadeiro centro da adoração.
+
+> "Porque dele, por ele e para ele são todas as coisas."
+>
+> Romanos 11:36
+
+---
+
+# © Licença
 
 Todos os direitos reservados.
 
