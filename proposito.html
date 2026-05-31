@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>README • STRINGS.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--accent:#8B5CF6;
+--bg:#050816;
+--card:#0b1020;
+--text:#e5e7eb;
+--muted:#9ca3af;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:
+radial-gradient(circle at top,
+rgba(139,92,246,.12),
+transparent 35%),
+var(--bg);
+
+color:var(--text);
+
+overflow-x:hidden;
+line-height:1.9;
+
+}
+
+.back-button{
+
+position:fixed;
+
+top:25px;
+left:25px;
+
+width:52px;
+height:52px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:16px;
+
+background:
+rgba(255,255,255,.04);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+color:white;
+
+font-size:1.1rem;
+
+backdrop-filter:blur(20px);
+
+transition:.3s;
+
+z-index:9999;
+
+}
+
+.back-button:hover{
+
+transform:
+translateX(-4px);
+
+background:
+rgba(139,92,246,.15);
+
+border-color:
+rgba(139,92,246,.4);
+
+box-shadow:
+0 0 25px rgba(139,92,246,.2);
+
+}
+
+@media(max-width:768px){
+
+.back-button{
+
+top:15px;
+left:15px;
+
+width:48px;
+height:48px;
+
+}
+
+}
+
+/* ORBS */
+
+.orb{
+
+position:fixed;
+
+border-radius:50%;
+
+filter:blur(140px);
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+.orb-1{
+
+width:400px;
+height:400px;
+
+background:#8B5CF6;
+
+top:-150px;
+left:-150px;
+
+opacity:.15;
+
+}
+
+.orb-2{
+
+width:350px;
+height:350px;
+
+background:#5B21B6;
+
+bottom:-150px;
+right:-100px;
+
+opacity:.15;
+
+}
+
+/* CONTAINER */
+
+.container{
+
+width:min(92%,1000px);
+
+margin:auto;
+
+padding:80px 0;
+
+}
+
+/* LOGO */
+
+.logo{
+
+text-align:center;
+
+font-size:2.5rem;
+
+font-weight:900;
+
+margin-bottom:60px;
+
+letter-spacing:1px;
+
+}
+
+.logo span{
+
+color:var(--accent);
+
+}
+
+/* CARD */
+
+.readme{
+
+background:
+rgba(255,255,255,.03);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+backdrop-filter:
+blur(20px);
+
+border-radius:32px;
+
+padding:60px;
+
+}
+
+/* TITLES */
+
+h1{
+
+font-size:3rem;
+
+margin-bottom:15px;
+
+}
+
+h2{
+
+margin-top:50px;
+margin-bottom:20px;
+
+color:var(--accent);
+
+font-size:1.8rem;
+
+}
+
+h3{
+
+font-size:1.2rem;
+
+font-weight:500;
+
+color:var(--muted);
+
+margin-bottom:35px;
+
+}
+
+p{
+
+color:var(--muted);
+
+margin-bottom:18px;
+
+}
+
+/* DIVIDER */
+
+hr{
+
+border:none;
+
+height:1px;
+
+margin:45px 0;
+
+background:
+rgba(255,255,255,.08);
+
+}
+
+/* LIST */
+
+ul{
+
+padding-left:25px;
+
+}
+
+li{
+
+margin-bottom:10px;
+
+color:var(--muted);
+
+}
+
+/* QUOTE */
+
+blockquote{
+
+margin:25px 0;
+
+padding:25px;
+
+border-left:
+4px solid var(--accent);
+
+background:
+rgba(139,92,246,.08);
+
+border-radius:16px;
+
+color:var(--text);
+
+}
+
+/* CODE */
+
+pre{
+
+margin-top:20px;
+
+padding:25px;
+
+overflow:auto;
+
+border-radius:18px;
+
+background:#0b1020;
+
+border:
+1px solid rgba(255,255,255,.08);
+
+color:#d1d5db;
+
+font-family:
+Consolas, monospace;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+text-align:center;
+
+margin-top:60px;
+
+color:var(--muted);
+
+font-size:.95rem;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.container{
+
+padding:40px 0;
+
+}
+
+.readme{
+
+padding:30px;
+
+}
+
+.logo{
+
+font-size:2rem;
+
+margin-bottom:40px;
+
+}
+
+h1{
+
+font-size:2.1rem;
+
+}
+
+h2{
+
+font-size:1.4rem;
+
+}
+
+pre{
+
+font-size:.85rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+    <a href="index.html" class="back-button">
+    <svg
+xmlns="http://www.w3.org/2000/svg"
+width="24"
+height="24"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="2.5"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<path d="M19 12H5"></path>
+<path d="M12 19L5 12L12 5"></path>
+
+</svg>
+</a>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="container">
+
+<div class="logo">
+<span>S</span>TRINGS.
+</div>
+
+<div class="readme">
+
+<h1>🎸 STRINGS.</h1>
+
+<h3>Transformando adoração em acordes.</h3>
+
+<p>
+STRINGS é um projeto cristão dedicado à música, adoração e composição.
+Seu propósito é ajudar músicos, levitas e adoradores a desenvolverem suas habilidades enquanto usam a música como instrumento para glorificar a Deus.
+</p>
+
+<hr>
+
+<h2>✨ Propósito</h2>
+
+<p>Acreditamos que a música vai além de notas e técnicas.</p>
+
+<p>Cada acorde pode carregar uma mensagem.</p>
+<p>Cada melodia pode anunciar o Evangelho.</p>
+<p>Cada canção pode conduzir corações à presença de Cristo.</p>
+
+<p>
+O STRINGS nasceu para unir musicalidade e propósito, oferecendo conteúdos que auxiliem músicos cristãos em sua jornada ministerial.
+</p>
+
+<hr>
+
+<h2>🎼 O que você encontrará</h2>
+
+<ul>
+<li>Dedilhados e técnicas para violão</li>
+<li>Campo harmônico aplicado à adoração</li>
+<li>Escalas e improvisação</li>
+<li>Estudos de musicalidade</li>
+<li>Composição cristã</li>
+<li>Desenvolvimento ministerial</li>
+<li>Canções autorais</li>
+<li>Recursos para levitas e ministros de louvor</li>
+</ul>
+
+<hr>
+
+<h2>🎵 Composições</h2>
+
+<p>Algumas das canções presentes no projeto:</p>
+
+<ul>
+<li>Canção do Noivo</li>
+<li>Por Meio de Nós</li>
+<li>A Estaca Zero</li>
+</ul>
+
+<p>
+Cada composição nasce da Palavra, da oração e da busca por transmitir verdades bíblicas através da música.
+</p>
+
+<hr>
+
+<h2>📖 Versículo Base</h2>
+
+<blockquote>
+"Tudo quanto tem fôlego louve ao Senhor. Louvai ao Senhor."
+<br><br>
+<strong>Salmos 150:6</strong>
+</blockquote>
+
+<hr>
+
+<h2>🚀 Tecnologias Utilizadas</h2>
+
+<ul>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+<li>Font Awesome</li>
+<li>Google Fonts (Inter)</li>
+</ul>
+
+<hr>
+
+<h2>📱 Responsividade</h2>
+
+<p>O projeto foi desenvolvido para funcionar em:</p>
+
+<ul>
+<li>Desktop</li>
+<li>Notebook</li>
+<li>Tablet</li>
+<li>Smartphones</li>
+</ul>
+
+<hr>
+
+<h2>🎨 Características</h2>
+
+<ul>
+<li>Interface moderna e minimalista</li>
+<li>Tema escuro premium</li>
+<li>Design responsivo</li>
+<li>Biblioteca musical</li>
+<li>Canções autorais</li>
+<li>Player integrado</li>
+<li>Animações suaves</li>
+<li>Página 404 personalizada</li>
+<li>Experiência focada em adoração e musicalidade</li>
+</ul>
+
+<hr>
+
+<h2>📂 Estrutura</h2>
+
+<pre>
+STRINGS/
+│
+├── index.html
+├── style.css
+├── main.js
+│
+├── assets/
+│   ├── imagens
+│   ├── capas
+│   ├── ícones
+│   └── composições
+│
+└── README.md
+</pre>
+
+<hr>
+
+<h2>🎯 Missão</h2>
+
+<p>
+Capacitar músicos e adoradores para que desenvolvam seus dons com excelência, entendendo que a técnica é importante, mas o propósito é indispensável.
+</p>
+
+<p>
+O objetivo não é apenas formar instrumentistas melhores, mas adoradores mais conscientes de seu chamado.
+</p>
+
+<hr>
+
+<h2>👨‍💻 Autor</h2>
+
+<p>
+<strong>Vinícios Santana</strong>
+</p>
+
+<p>
+Músico, compositor cristão e fundador do projeto STRINGS.
+</p>
+
+<hr>
+
+<h2>✝️ Declaração</h2>
+
+<p>
+O STRINGS existe para exaltar a Cristo.
+</p>
+
+<p>
+Toda composição, estudo e conteúdo presente neste projeto busca apontar para Jesus, o verdadeiro centro da adoração.
+</p>
+
+<blockquote>
+"Porque dele, por ele e para ele são todas as coisas."
+<br><br>
+<strong>Romanos 11:36</strong>
+</blockquote>
+
+<hr>
+
+<h2>© Licença</h2>
+
+<p>
+Todos os direitos reservados.
+</p>
+
+<p>
+Este projeto e seu conteúdo não podem ser reproduzidos, distribuídos ou utilizados sem autorização prévia do autor.
+</p>
+
+<div class="footer">
+STRINGS. • Transformando adoração em acordes.
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
