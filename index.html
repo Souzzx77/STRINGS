@@ -1337,55 +1337,27 @@ rgba(139,92,246,.15);
 
 /* CAPA */
 
-.song-cover{
-position:relative;
-padding:20px;
-overflow:visible;
+.song-cover {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 22px;
+  position: relative;
 }
 
-.song-cover img{
-width:100%;
-height:260px;
-display:block;
-border-radius:20px;
-object-fit:contain;
-transform:none !important;
+.song-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%; /* 👈 aqui está o segredo */
+  display: block;
+  transform: none !important;
+  transition: none !important;
 }
 
-.song-card:hover .song-cover img{
-transform:none !important;
-}
-
-.song-play{
-position:absolute;
-top:275px;
-right:20px;
-
-width:60px;
-height:60px;
-
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-background:var(--accent);
-
-box-shadow:
-0 10px 30px rgba(139,92,246,.45);
-
-z-index:10;
-}
-
-@media(max-width:768px){
-
-.song-play{
-right:15px;
-bottom:15px;
-top:auto;
-}
-
+/* garante que NADA mexa na imagem no hover */
+.song-card:hover .song-cover img {
+  transform: none !important;
 }
 
 .song-card:hover .song-cover img{
@@ -3098,21 +3070,21 @@ proposito do projeto</a>
 
 <div>
 
-<h3>+120</h3>
+<h3>+47</h3>
 <span>Conteúdos</span>
 
 </div>
 
 <div>
 
-<h3>+50</h3>
+<h3>12</h3>
 <span>Composições</span>
 
 </div>
 
 <div>
 
-<h3>+8</h3>
+<h3>+2</h3>
 <span>Anos tocando</span>
 
 </div>
@@ -3328,65 +3300,60 @@ Treinamento auditivo avançado.
 
 <!-- CANÇÕES -->
 
-<section class="songs reveal" id="songs">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Composições
-</h2>
-
-<p>
-Músicas desenvolvidas ao longo da jornada.
-</p>
-
-</div>
-
 <div class="songs-grid">
 
-<div class="song-card">
+  <div class="song-card" data-img="cancao-do-noivo.jpeg">
+    <div class="song-cover">
+      <img src="cancao-do-noivo.jpeg" alt="Canção do Noivo">
+      <button class="song-play">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+    <div class="song-header">
+  <h3>Canção do Noivo</h3>
 
-<div class="song-cover"></div>
+  <a class="song-play" href="https://www.youtube.com/watch?v=Zt9n8sXoQh0" target="_blank">
+    <i class="fa-solid fa-play"></i>
+  </a>
+</div>
+    <p>Habitação</p>
+  </div>
 
-<h3>Canção do Noivo</h3>
+  <div class="song-card" data-img="por-meio-de-nos.jpeg">
+    <div class="song-cover">
+      <img src="por-meio-de-nos.jpeg" alt="Por Meio de Nós">
+      <button class="song-play">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+    <div class="song-header">
+  <h3>Por Meio de Nós</h3>
 
-<p>
-Habitação
-</p>
+  <a class="song-play" href="https://www.youtube.com/watch?v=Zt9n8sXoQh0" target="_blank">
+    <i class="fa-solid fa-play"></i>
+  </a>
+</div>
+    <p>Avivamento</p>
+  </div>
+
+  <div class="song-card" data-img="estaca-zero.jpeg">
+    <div class="song-cover">
+      <img src="eu-fui-encontrado.jpeg" alt="A Estaca Zero">
+      <button class="song-play">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+    <div class="song-header">
+  <h3>De Volta Pra Casa</h3>
+
+  <a class="song-play" href="https://www.youtube.com/watch?v=Zt9n8sXoQh0" target="_blank">
+    <i class="fa-solid fa-play"></i>
+  </a>
+</div>
+    <p>Entrega</p>
+  </div>
 
 </div>
-
-<div class="song-card">
-
-<div class="song-cover"></div>
-
-<h3>Por Meio de Nós</h3>
-
-<p>
-Avivamento
-</p>
-
-</div>
-
-<div class="song-card">
-
-<div class="song-cover"></div>
-
-<h3>A Estaca Zero</h3>
-
-<p>
-Entrega
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- TIMELINE -->
 
