@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 • STRINGS.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--accent:#8B5CF6;
+
+--bg:#050816;
+--bg-secondary:#0b1020;
+
+--text:#e5e7eb;
+--muted:#9ca3af;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+
+background:
+radial-gradient(
+circle at top,
+rgba(139,92,246,.12),
+transparent 35%
+),
+var(--bg);
+
+color:var(--text);
+
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+/* ORBS */
+
+.orb{
+position:fixed;
+border-radius:50%;
+filter:blur(120px);
+pointer-events:none;
+z-index:0;
+}
+
+.orb-1{
+width:350px;
+height:350px;
+background:#8B5CF6;
+top:-100px;
+left:-100px;
+opacity:.25;
+}
+
+.orb-2{
+width:280px;
+height:280px;
+background:#5B21B6;
+bottom:-80px;
+right:-80px;
+opacity:.2;
+}
+
+/* PAGE */
+
+.error-page{
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:40px;
+
+position:relative;
+z-index:1;
+}
+
+.error-container{
+width:100%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.error-box{
+width:min(90%,900px);
+
+text-align:center;
+
+padding:60px;
+
+position:relative;
+z-index:2;
+}
+
+/* LOGO */
+
+.logo{
+font-size:2rem;
+font-weight:900;
+margin-bottom:40px;
+}
+
+.logo span{
+color:var(--accent);
+}
+
+/* 404 */
+
+.error-code{
+font-size:clamp(7rem,20vw,14rem);
+
+font-weight:900;
+
+line-height:.9;
+
+background:
+linear-gradient(
+180deg,
+#ffffff,
+rgba(255,255,255,.25)
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+margin-bottom:20px;
+
+text-shadow:
+0 0 60px rgba(139,92,246,.15);
+}
+
+/* TITLE */
+
+.error-box h1{
+font-size:clamp(2rem,5vw,3.5rem);
+font-weight:800;
+margin-bottom:20px;
+}
+
+/* TEXT */
+
+.error-box p{
+max-width:650px;
+
+margin:0 auto 40px;
+
+line-height:1.9;
+
+font-size:1.05rem;
+
+color:var(--muted);
+}
+
+/* STRING */
+
+.string-line{
+width:250px;
+height:2px;
+
+margin:40px auto;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+var(--accent),
+transparent
+);
+
+position:relative;
+}
+
+.string-line::after{
+content:"♪";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:
+translate(-50%,-50%);
+
+background:var(--bg);
+
+padding:0 12px;
+
+color:var(--accent);
+
+font-size:1.2rem;
+}
+
+/* BUTTONS */
+
+.actions{
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+padding:16px 28px;
+
+border-radius:999px;
+
+background:var(--accent);
+
+color:white;
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+
+box-shadow:
+0 0 30px rgba(139,92,246,.4);
+}
+
+.btn-secondary{
+padding:16px 28px;
+
+border-radius:999px;
+
+border:
+1px solid rgba(255,255,255,.08);
+
+color:white;
+text-decoration:none;
+
+transition:.3s;
+}
+
+.btn-secondary:hover{
+background:
+rgba(255,255,255,.04);
+
+transform:translateY(-4px);
+}
+
+/* FOOTER */
+
+.signature{
+margin-top:50px;
+
+font-size:.9rem;
+
+color:var(--muted);
+}
+
+.signature span{
+color:var(--accent);
+font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.error-page{
+padding:25px;
+}
+
+.error-box{
+padding:25px 10px;
+}
+
+.actions{
+flex-direction:column;
+}
+
+.actions a{
+width:100%;
+}
+
+.error-box h1{
+font-size:2rem;
+}
+
+.error-box p{
+font-size:1rem;
+line-height:1.8;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="error-page">
+
+<div class="error-container">
+
+<div class="error-box">
+
+<div class="logo">
+<span>S</span>TRINGS.
+</div>
+
+<div class="error-code">
+404
+</div>
+
+<h1>
+Essa nota não foi encontrada.
+</h1>
+
+<div class="string-line"></div>
+
+<p>
+A página que você procura parece ter saído do tom,
+mudado de endereço ou simplesmente nunca existiu.
+Mas toda boa composição encontra o caminho de volta.
+</p>
+
+<div class="actions">
+
+<a href="index.html" class="btn-primary">
+Voltar ao Início
+</a>
+
+<a href="javascript:history.back()" class="btn-secondary">
+Página Anterior
+</a>
+
+</div>
+
+<div class="signature">
+STRINGS. • Transformando emoções em acordes
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
