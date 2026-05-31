@@ -147,8 +147,8 @@ border-radius:999px;
 
 position:fixed;
 
-width:80px;
-height:80px;
+width:140px;
+height:140px;
 
 border-radius:50%;
 
@@ -157,14 +157,24 @@ pointer-events:none;
 background:
 radial-gradient(
 circle,
-rgba(139,92,246,.32) 0%,
-rgba(139,92,246,.14) 35%,
-transparent 70%
+rgba(139,92,246,.06),
+transparent 80%
 );
 
 transform:translate(-50%,-50%);
 
 z-index:0;
+}
+
+.img-glow {
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 0 20px rgba(255,255,255,0.25);
+  transition: 0.3s ease;
+}
+
+.img-glow:hover {
+  box-shadow: 0 0 35px rgba(255,255,255,0.45);
 }
 
 /* ==========================================
@@ -1427,53 +1437,6 @@ top:20px;
 right:20px;
 z-index:9999;
 width:320px;
-}
-
-.floating-player-dropdown{
-
-position:absolute;
-
-top:70px;
-right:0;
-
-width:320px;
-
-padding:18px;
-
-border-radius:20px;
-
-background:
-linear-gradient(
-180deg,
-#111827,
-#0b1020
-);
-
-border:
-1px solid rgba(255,255,255,.08);
-
-box-shadow:
-0 25px 70px rgba(0,0,0,.5),
-0 0 40px rgba(139,92,246,.10);
-
-opacity:0;
-visibility:hidden;
-
-transform:translateY(-12px);
-
-transition:.35s ease;
-
-z-index:9999;
-
-}
-
-.floating-player-dropdown.active{
-
-opacity:1;
-visibility:visible;
-
-transform:translateY(0);
-
 }
 
 .player-toggle{
@@ -2889,7 +2852,7 @@ translateY(0);
 /* garante que o hover não volte transparência */
 .floating-player .song-card:hover{
   background: linear-gradient(180deg, #111827, #0b1020) !important;
-}
+}  
 
 /* ==========================================
    FIX: PLAYER NÃO TAMPAR O HEADER NO MOBILE
@@ -3040,7 +3003,7 @@ player.classList.toggle("active");
   <a href="#skills">Biblioteca</a>
   <a href="#songs">Canções</a>
   <a href="#timeline">Jornada</a>
-  <a href="404.html">Contato</a>
+  <a href="#contact">Contato</a>
 </nav>
 
 <div class="floating-player">
@@ -3052,28 +3015,31 @@ player.classList.toggle("active");
 
 <div class="player-content">
 
-<div class="song-card">
 
-<div class="song-cover">
+   <div class="song-card"
+  data-img="cancao-do-noivo.jpeg"
+  data-title="Canção do Noivo"
+  data-desc="Composição inspirada na passagem de Mateus 25, explorando temas de preparação, vigilância e a beleza da jornada espiritual. A canção busca transmitir a urgência e a esperança presentes na narrativa bíblica, convidando os ouvintes a refletirem sobre sua própria caminhada de fé.">
 
-<img
-src="Canção do noivo.jpeg"
-alt="Canção do Noivo">
+  <div class="song-cover">
 
-<a
-class="song-play"
-href="https://www.youtube.com/watch?v=Zt9n8sXoQh0"
-target="_blank">
+    <img
+      src="cancao-do-noivo.jpeg"
+      alt="Canção do Noivo">
 
-<i class="fa-solid fa-play"></i>
+    <a
+      class="song-play"
+      href="https://www.youtube.com/watch?v=Zt9n8sXoQh0"
+      target="_blank">
 
-</a>
+      <i class="fa-solid fa-play"></i>
 
-</div>
+    </a>
 
-<h3>Canção do Noivo</h3>
+  </div>
 
-<p>Mateus 25</p>
+  <h3>Canção do Noivo</h3>
+  <p>Mateus 25</p>
 
 </div>
 
@@ -3123,8 +3089,8 @@ das cordas.
 Ouvir Canções
 </a>
 
-<a href="proposito.html" class="btn-secondary">
-Propósito do Projeto
+<a href="#about" class="btn-secondary">
+Conhecer Jornada
 </a>
 
 </div>
@@ -3160,9 +3126,7 @@ Propósito do Projeto
 
 <div class="guitar-frame">
 
-<img
-src="perfil1.png"
-alt="Violão">
+<img src="Eu.jpeg" alt="Violão" class="img-glow">
 
 </div>
 
@@ -3390,7 +3354,7 @@ Músicas desenvolvidas ao longo da jornada.
 <h3>Canção do Noivo</h3>
 
 <p>
-Mateus 25
+Habitação
 </p>
 
 </div>
@@ -3442,17 +3406,17 @@ Jornada
 <div class="timeline-wrap">
 
 <div class="timeline-item">
-<span>2018</span>
+<span>2024</span>
 <h3>Primeiro Violão</h3>
 </div>
 
 <div class="timeline-item">
-<span>2020</span>
+<span>2025</span>
 <h3>Primeiras Composições</h3>
 </div>
 
 <div class="timeline-item">
-<span>2022</span>
+<span>2026</span>
 <h3>Ministrações</h3>
 </div>
 
@@ -3471,7 +3435,7 @@ Jornada
   <div class="container">
 
     <div class="footer-social-title">
-      <h3>Conecte-se com a Nexa</h3>
+      <h3>Conecte-se com a Strings</h3>
       <p>Escolha seu canal e entre no nosso ecossistema digital.</p>
     </div>
 
@@ -3483,10 +3447,10 @@ Jornada
           <i class="fab fa-whatsapp"></i>
           <div class="social-info">
             <h4>WhatsApp</h4>
-            <p>Fale direto com a Nexa</p>
+            <p>Fale direto com a Strings</p>
           </div>
         </div>
-        <a href="https://wa.me/5511981332616?text=Olá,%20Gostaria%20de%20contratar%20os%20serviços%20da%20Nexa" target="_blank">Conversar</a>
+        <a href="https://wa.me/5511981332616?text=Olá,%20Gostaria%20de%20contratar%20os%20serviços%20da%20Strings" target="_blank">Conversar</a>
       </div>
 
       <!-- INSTAGRAM -->
@@ -3495,10 +3459,10 @@ Jornada
           <i class="fab fa-instagram"></i>
           <div class="social-info">
             <h4>Instagram</h4>
-            <p>Branding e posicionamento</p>
+            <p>Conteúdo visual & inspiração</p>
           </div>
         </div>
-        <a href="https://www.instagram.com/agencynexaenterprises/" target="_blank">Acessar</a>
+        <a href="https://www.instagram.com/souzzx_77/" target="_blank">Acessar</a>
       </div>
 
       <!-- TIKTOK -->
@@ -3507,7 +3471,7 @@ Jornada
           <i class="fab fa-tiktok"></i>
           <div class="social-info">
             <h4>TikTok</h4>
-            <p>Conteúdo rápido e tendências</p>
+            <p>Dicas & Louvores</p>
           </div>
         </div>
         <a href="https://www.tiktok.com/@agencynexaenterprises" target="_blank">Acessar</a>
@@ -3519,7 +3483,7 @@ Jornada
           <i class="fab fa-discord"></i>
           <div class="social-info">
             <h4>Discord</h4>
-            <p>Comunidade e networking</p>
+            <p>Comunidade & Comunhão</p>
           </div>
         </div>
         <a href="https://discord.gg/v5ty46pFwY" target="_blank">Entrar</a>
@@ -3531,7 +3495,7 @@ Jornada
           <i class="fab fa-youtube"></i>
           <div class="social-info">
             <h4>YouTube</h4>
-            <p>Conteúdo completo e estratégico</p>
+            <p>Louvores, ministrações & dicas</p>
           </div>
         </div>
         <a href="https://www.youtube.com/channel/UCBvGm-pfP3e_h4zDxUQ309Q" target="_blank">Acessar</a>
