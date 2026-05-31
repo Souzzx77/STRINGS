@@ -2891,6 +2891,22 @@ translateY(0);
   background: linear-gradient(180deg, #111827, #0b1020) !important;
 }
 
+/* ==========================================
+   FIX: PLAYER NÃO TAMPAR O HEADER NO MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  header.navbar {
+    z-index: 2000 !important;
+  }
+
+  .floating-player {
+    z-index: 1500 !important;
+  }
+
+}
+
 </style>
 
 </head>
