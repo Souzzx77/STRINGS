@@ -206,12 +206,67 @@ border-bottom:
 
 }
 
+@media (max-width: 768px) {
+
 .nav-wrap{
-height:90px;
-display:flex;
-align-items:center;
-justify-content:center;
+justify-content:flex-end;
+gap:12px;
+}
+
+.logo{
+position:absolute;
+left:0;
+}
+
+@media (max-width: 768px) {
+
+  .player-toggle{
+
+    position:absolute;
+    left:auto;
+    right:150px;
+
+    width:40px;
+    height:40px;
+
+    padding:0;
+
+    justify-content:center;
+
+    gap:0;
+
+  }
+
+  .player-toggle span{
+    display:none;
+  }
+
+  .player-toggle i{
+    font-size:1rem;
+  }
+
+}
+
+.theme-toggle{
 position:relative;
+right:auto;
+top:auto;
+transform:none;
+
+width:42px;
+height:42px;
+}
+
+.mobile-toggle{
+position:relative;
+right:0;
+top:auto;
+transform:none;
+
+width:42px;
+height:42px;
+}
+
 }
 
 body.light-theme{
@@ -3217,7 +3272,7 @@ JSON.stringify(updated)
 
     <button class="player-toggle">
         <i class="fa-solid fa-chevron-down"></i>
-        <span>Canção do Noivo</span>
+        <span class="player-label">Canção</span>
     </button>
 
     <div class="player-content">
