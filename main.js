@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initCounters();
   initParallax();
-  initSongCards();
+  initSongModal(); // 👈 ESSA LINHA NOVA
   initMagneticButtons();
   initTypingEffect();
 
@@ -559,59 +559,75 @@ window.innerHeight;
    SONG MODAL
 ========================================== */
 
-const songCards =
-document.querySelectorAll(
-".song-card"
-);
+/* ==========================================
+   SONG MODAL (VERSÃO CORRIGIDA)
+========================================== */
 
-const songModal =
-document.getElementById(
-"songModal"
-);
+function initSongModal() {
 
-const closeModal =
-document.querySelector(
-".close-modal"
-);
+  const songCards = document.querySelectorAll(".song-card");
+  const songModal = document.getElementById("songModal");
+  const closeModal = document.querySelector(".close-modal");
 
-songCards.forEach(card=>{
+  if (!songCards.length || !songModal) return;
 
-card.addEventListener(
-"click",
-()=>{
+  songCards.forEach(card => {
 
-songModal.classList.add(
-"active"
-);
+    card.addEventListener("click", (e) => {
 
-document.getElementById(
-"modalTitle"
-).innerText =
-card.querySelector("h3").innerText;
+  if (
+    e.target.closest(".favorite-btn") ||
+    e.target.closest(".song-play")
+  ) {
+    return;
+  }
 
-document.getElementById(
-"modalDescription"
-).innerText =
+      songModal.classList.add("active");
 
-"Esta composição faz parte da coleção autoral do projeto STRINGS.";
+      // TEXTO
+      document.getElementById("modalTitle").innerText =
+        card.dataset.title || "Canção do Noivo";
 
-}
-);
+      document.getElementById("modalDescription").innerText =
+        card.dataset.desc || "“Canção do Noivo” é um clamor de rendição profunda, onde a alma abandona tudo para correr atrás da presença de Deus. A letra expressa um desejo intenso de ir além dos limites humanos.. do mais profundo ao mais alto, até encontrar o Noivo em adoração pura.";
 
-});
+      // IMAGEM DO CARD EXPANDIDO
+      const modalCover = document.querySelector(".song-modal-cover");
 
-if(closeModal){
+      if (card.dataset.img) {
+        modalCover.style.backgroundImage = `url(${card.dataset.img})`;
+        modalCover.style.backgroundSize = "cover";
+        modalCover.style.backgroundPosition = "center";
+      }
 
-closeModal.addEventListener(
-"click",
-()=>{
+      // BOTÃO PLAY
+      const playBtn = document.querySelector(".play-btn");
 
-songModal.classList.remove(
-"active"
-);
+      if (playBtn) {
+        playBtn.onclick = () => {
+          if (card.dataset.link) {
+            window.open(card.dataset.link, "_blank");
+          }
+        };
+      }
 
-}
-);
+    });
+
+  });
+
+  // FECHAR MODAL
+  if (closeModal) {
+    closeModal.addEventListener("click", () => {
+      songModal.classList.remove("active");
+    });
+  }
+
+  // clicar fora do card fecha
+  songModal.addEventListener("click", (e) => {
+    if (e.target === songModal) {
+      songModal.classList.remove("active");
+    }
+  });
 
 }
 
@@ -768,3 +784,52 @@ text.includes(value)
 );
 
 }
+
+/* ==========================================
+   IMAGE MODAL LOGIC
+========================================== */
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".image-close");
+
+document.querySelectorAll(".player-cover").forEach(img => {
+  img.addEventListener("click", () => {
+    modal.classList.add("active");
+    modalImg.src = img.dataset.full || img.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 1200); // tempo dramático de entrada 😄
+});
+
+document.addEventListener("click", (e) => {
+
+  const favoriteBtn = e.target.closest(".favorite-btn");
+
+  if (favoriteBtn) {
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    favoriteBtn.classList.toggle("active");
+
+    return;
+  }
+
+});
