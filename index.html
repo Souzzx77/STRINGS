@@ -274,12 +274,19 @@ linear-gradient(
 }
 
 .theme-toggle{
+
+position:absolute;
+
 left:140px;
 top:50%;
 transform:translateY(-50%);
 
 width:50px;
 height:50px;
+
+display:flex;
+align-items:center;
+justify-content:center;
 
 border:none;
 border-radius:14px;
@@ -288,27 +295,35 @@ background:rgba(255,255,255,.05);
 
 color:white;
 
-cursor:pointer;
-
 font-size:1.1rem;
+
+cursor:pointer;
 
 z-index:9999;
 
-transition:.3s;
+transition:
+transform .15s ease,
+background .2s ease,
+color .2s ease;
+
 }
 
 .theme-toggle:hover{
-background:rgba(139,92,246,.15);  
 
-transform:translateY(-2px);
+background:rgba(255,255,255,.05);
+transform:translateY(-50%);
+
+}
+
+.theme-toggle:active{
+
+transform:translateY(-50%) scale(1.12);
 
 }
 
 body.light-theme .theme-toggle{
 
-background:
-rgba(0,0,0,.05);
-
+background:rgba(0,0,0,.05);
 color:#111827;
 
 }
@@ -316,9 +331,33 @@ color:#111827;
 @media(max-width:768px){
 
 .theme-toggle{
+
+position:fixed;
+
+top:17px;
+right:126px;
+
 left:auto;
-right:85px;
+
+width:42px;
+height:42px;
+
+transform:none;
+
 }
+
+.theme-toggle:hover{
+
+transform:none;
+
+}
+
+.theme-toggle:active{
+
+transform:scale(1.12);
+
+}
+
 }
 
 .logo{
@@ -2981,18 +3020,35 @@ translateY(0);
 @media (max-width:768px){
 
 .nav-wrap{
-    justify-content:flex-end;
     position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
 }
 
 .logo{
+    position:absolute;
     left:15px;
+    z-index:2000;
 }
 
+/* Tema */
+.theme-toggle{
+    position:fixed;
+    top:17px;
+    right:72px;
+    left:auto;
+    width:42px;
+    height:42px;
+    transform:none;
+    z-index:1600;
+}
+
+/* Música */
 .floating-player{
     position:fixed;
     top:17px;
-    right:78px;
+    right:126px;
     width:auto;
     z-index:1600;
 }
@@ -3001,7 +3057,6 @@ translateY(0);
     width:42px;
     height:42px;
     padding:0;
-    border-radius:12px;
     justify-content:center;
 }
 
@@ -3009,21 +3064,14 @@ translateY(0);
     display:none;
 }
 
-.theme-toggle{
-    position:fixed;
-    top:17px;
-    right:126px;
-    width:42px;
-    height:42px;
-    z-index:1600;
-}
-
+/* Menu */
 .mobile-toggle{
     position:fixed;
     top:17px;
     right:15px;
     width:42px;
     height:42px;
+    transform:none;
     z-index:1600;
 }
 
