@@ -379,14 +379,12 @@ box-shadow:
 
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  .floating-player-dropdown {
-    top: 90px;
-    z-index: 999;
-  }
-
-  @media (max-width: 768px){
+.floating-player-dropdown{
+top:90px;
+z-index:999;
+}
 
 .floating-player .player-toggle span{
 display:none;
@@ -400,8 +398,6 @@ justify-content:center;
 
 .floating-player .player-toggle i{
 font-size:1.3rem;
-}
-
 }
 
 }
@@ -428,14 +424,12 @@ position:absolute;
 inset:0;
 
 background:
-
-radial-gradient(circle at 70% 40%,
-rgba(139,92,246,.20),
-transparent 25%),
-
-radial-gradient(circle at 20% 70%,
-rgba(139,92,246,.12),
-transparent 20%);
+linear-gradient(
+to bottom,
+rgba(139,92,246,.18) 0%,
+rgba(139,92,246,.08) 12%,
+transparent 22%
+);
 
 z-index:-1;
 }
@@ -749,22 +743,14 @@ opacity:0;
    ========================================== */
 
 .reveal{
-
-opacity:0;
-
-transform:
-translateY(60px);
-
-transition:
-all 1s ease;
+opacity:1;
+transform:none;
+transition:none;
 }
 
 .reveal.active{
-
 opacity:1;
-
-transform:
-translateY(0);
+transform:none;
 }
 
 /* ==========================================
@@ -1454,16 +1440,6 @@ color:var(--accent);
 
 box-shadow:
 0 0 15px rgba(139,92,246,.35);
-
-}
-
-.favorite-btn:hover{
-color:#6b0eb8;
-transform:scale(1.1);
-}
-
-.favorite-btn.active{
-color:var(--accent);
 
 background:
 rgba(139,92,246,.18);
@@ -2999,6 +2975,61 @@ translateY(0);
 }
 
 /* ==========================================
+   HEADER MOBILE - ALINHAMENTO DOS BOTÕES
+========================================== */
+
+@media (max-width:768px){
+
+.nav-wrap{
+    justify-content:flex-end;
+    position:relative;
+}
+
+.logo{
+    left:15px;
+}
+
+.floating-player{
+    position:fixed;
+    top:17px;
+    right:78px;
+    width:auto;
+    z-index:1600;
+}
+
+.player-toggle{
+    width:42px;
+    height:42px;
+    padding:0;
+    border-radius:12px;
+    justify-content:center;
+}
+
+.player-toggle span{
+    display:none;
+}
+
+.theme-toggle{
+    position:fixed;
+    top:17px;
+    right:126px;
+    width:42px;
+    height:42px;
+    z-index:1600;
+}
+
+.mobile-toggle{
+    position:fixed;
+    top:17px;
+    right:15px;
+    width:42px;
+    height:42px;
+    z-index:1600;
+}
+
+}
+
+/* ==========================================
    CORREÇÃO: FUNDO DO CARD DO PLAYER
 ========================================== */
 
@@ -3225,7 +3256,7 @@ JSON.stringify(updated)
         <div class="song-card"
             data-img="cancao-do-noivo.jpeg"
             data-title="Canção do Noivo"
-            data-desc="Uma composição inspirada pela Santa expectativa de uma habitação com O Senhor, de ve-lO chegar e viver em um amor eterno">
+            data-desc="Uma composição inspirada pela Santa expectativa de uma habitação eterna com O Senhor, baseada no anseio de viver em Seu eterno amor">
 
             <div class="song-cover">
 
@@ -3309,7 +3340,7 @@ proposito do projeto</a>
 
 <div>
 
-<h3>12</h3>
+<h3>5</h3>
 <span>Composições</span>
 
 </div>
